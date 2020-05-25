@@ -4,5 +4,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install -j$(nproc) gd pdo_mysql
    
 WORKDIR /var/www
-ADD . /var/www
+ADD ./storage /var/www
 RUN chown -R www-data:www-data /var/www
+
+RUN chmod -R 755 /var/www/storage
