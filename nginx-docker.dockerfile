@@ -3,4 +3,4 @@ FROM nginx
 # RUN chown www-data:www-data -R /var/www
 #RUN chmod -R 777 /var/www
 
-RUN chmod -R 777 ./
+RUN chmod -R 777 /var/
