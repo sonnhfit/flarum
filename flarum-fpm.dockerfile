@@ -4,4 +4,4 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install -j$(nproc) gd pdo_mysql
     
     
-RUN chown -Rf www-data.www-data /var/www/vendor/*
+RUN chown -Rf www-data.www-data /var/www/*
