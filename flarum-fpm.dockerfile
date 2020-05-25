@@ -4,10 +4,10 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install -j$(nproc) gd pdo_mysql
    
 WORKDIR /var/www
-COPY ./storage /var/www/
+COPY ./storage/* /var/www/
 RUN chown -R www-data:www-data /var/www
 
 #RUN chmod -R 777 /var/www/storage/*
 
-RUN chmod -R 777 /var/www/web/storage/
-RUN chmod -R 777 /var/www/web/bootstrap/cache/
+RUN chmod -R 777 /var/www/storage/
+
