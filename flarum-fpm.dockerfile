@@ -5,7 +5,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     
     
 RUN chmod -R 777 /var/www/*
-
-RUN chown -R $USER:www-data storage/*, 
+RUN ls
+RUN chown -R $USER:www-data storage/*
 RUN chown -R $USER storage/* 
 RUN chmod -R 775 storage
