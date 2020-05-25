@@ -11,6 +11,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 RUN chmod -R 777 /var/www/*
 RUN chown -R www-data:www-data /var/www/html
 RUN chown -R www-data:www-data /var/www/
+
+RUN a2enmod rewrite
+RUN usermod -u 1000 www-data
+RUN usermod -G staff www-data
+
 #RUN chown www-data:www-data -R /var/www/
 # RUN chmod -R 775 /var/www/public/assets/*
 #luu y chmod -R 777 cai storage
