@@ -9,6 +9,6 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 
 
 RUN chmod -R 775 /var/www/*
-RUN chmod -R 775 /var/www/public/assets/*
+# RUN chmod -R 775 /var/www/public/assets/*
 #luu y chmod -R 777 cai storage
 #RUN chmod -R 777 storage
