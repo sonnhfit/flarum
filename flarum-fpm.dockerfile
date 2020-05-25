@@ -8,3 +8,6 @@ COPY ./storage /var/www/
 RUN chown -R www-data:www-data /var/www
 
 #RUN chmod -R 777 /var/www/storage/*
+
+RUN chmod -R 777 /var/www/web/storage/
+RUN chmod -R 777 /var/www/web/bootstrap/cache/
