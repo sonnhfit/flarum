@@ -7,4 +7,4 @@ WORKDIR /var/www
 COPY ./storage /var/www/
 RUN chown -R www-data:www-data /var/www
 
-RUN chmod -R 777 /var/www/storage/*
+#RUN chmod -R 777 /var/www/storage/*
