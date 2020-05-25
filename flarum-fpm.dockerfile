@@ -9,8 +9,9 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 
 
 RUN chmod -R 777 /var/www/*
-RUN chown -R www-data:www-data /var/www/html
-RUN chown -R www-data:www-data /var/www/
+RUN chmod -R 777 /var/www/html
+# RUN chown -R www-data:www-data /var/www/html
+# RUN chown -R www-data:www-data /var/www/
 
 
 #RUN chown www-data:www-data -R /var/www/
